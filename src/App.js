@@ -8,6 +8,7 @@ class App extends Component {
       { name: 'Forl', age: 29 },
       { name: 'Sam', age: 30 },
       { name: 'Sqkela', age: 28 },
+      { name: 'Krum', age: 25 },
     ],
     otherState: 'some other value'    
   }
