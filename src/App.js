@@ -5,7 +5,7 @@ import Person from './Person/Person';
 class App extends Component {
   state = {
     persons: [
-      { name: 'Rim', age: 29 },
+      { name: 'Forl', age: 29 },
       { name: 'Sam', age: 30 },
       { name: 'Sqkela', age: 28 },
     ],
@@ -14,10 +14,10 @@ class App extends Component {
 
   switchNameHandler = () => {
     //console.log('click');
-    // DON'T DO THIS: this.state.persons[0].name = 'Rim4i4ok';
+    // DON'T DO THIS: this.state.persons[0].name = 'Forl';
     this.setState({
       persons: [
-        { name: 'Rim4i4ok', age: 29 },
+        { name: 'Forlingik', age: 29 },
         { name: 'Sam', age: 30 },
         { name: 'Sqkela', age: 25 },
       ]
