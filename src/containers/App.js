@@ -4,17 +4,42 @@ import Persons from '../components/Persons/Persons';
 import Cockpit from '../components/Cockpit/Cockpit';
 
 class App extends Component {
-  state = {
-    persons: [
-      { id: 'oij', name: 'Forl', age: 29 },
-      { id: 'y9', name: 'Sam', age: 30 },
-      { id: 'iuh', name: 'Sqkela', age: 28 },
-      { id: '09i', name: 'Krum', age: 25 },
-      { id: 'j9i', name: 'Krugm', age: 22 },
-    ],
-    otherState: 'some other value',
-    showPersons: false    
+  constructor (props) {
+    super(props);
+    console.log('[App.js] Inside constructor()', props);
+
+    this.state = {
+      persons: [
+        { id: 'oij', name: 'Forl', age: 29 },
+        { id: 'y9', name: 'Sam', age: 30 },
+        { id: 'iuh', name: 'Sqkela', age: 28 },
+        { id: '09i', name: 'Krum', age: 25 },
+        { id: 'j9i', name: 'Krugm', age: 22 },
+      ],
+      otherState: 'some other value',
+      showPersons: false    
+    }
   }
+
+  componentWillMount() {
+    console.log('[App.js] Inside componentWillMount()');
+  }
+
+  componentDidMount() {
+    console.log('[App.js] Inside componentDidMount()');
+  }
+
+  // state = {
+  //   persons: [
+  //     { id: 'oij', name: 'Forl', age: 29 },
+  //     { id: 'y9', name: 'Sam', age: 30 },
+  //     { id: 'iuh', name: 'Sqkela', age: 28 },
+  //     { id: '09i', name: 'Krum', age: 25 },
+  //     { id: 'j9i', name: 'Krugm', age: 22 },
+  //   ],
+  //   otherState: 'some other value',
+  //   showPersons: false    
+  // }  
   
   deletePersonHandler = (personIndex) => {    
     const persons = [...this.state.persons];
@@ -51,6 +76,7 @@ class App extends Component {
   }
 
   render () {
+    console.log('[App.js] Inside render()');
     let persons = null;    
 
     if (this.state.showPersons) {
